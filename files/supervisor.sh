@@ -35,11 +35,10 @@ install() {
 }
 
 trap term_handler SIGTERM
-[ ! -d "/opt/steam/insurgency/insurgency/scripts" ] && install
+[ ! -d "/opt/steam/insurgency/Insurgency/Binaries" ] && install
 #loadConfig
 echo "Starting Insurgency Sandstorm Dedicated Server"
-cd /opt/steam/insurgency
-export LD_LIBRARY_PATH=/opt/steam/insurgency:/opt/steam/insurgency/bin:${LD_LIBRARY_PATH}
-su steam -c "./srcds_linux -console +sv_lan 0 +servercfgfile server.cfg +map \"market hunt\" +maxplayers 48" & wait ${!}
+cd /opt/steam/insurgency/Insurgency/Binaries/Linux
+su steam -c "./InsurgencyServer-Linux-Shipping -Port=27102 -QueryPort=27131 -log -hostname=\"WAN-Party\" -NoEAC" & wait ${!}
 echo "Insurgency Sandstorm Dedicated Server died"
 shutdown
