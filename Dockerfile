@@ -9,7 +9,8 @@ RUN apt-get update \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip wget \
     && useradd -ms /bin/bash steam
-#ADD ./files/ /tmp
+ADD ./files/ini/ /tmp/ini
+ADD ./files/txt/ /tmp/txt
 EXPOSE 27102/udp
 EXPOSE 27102
 #VOLUME ["/var/insurgency/cfg"]
