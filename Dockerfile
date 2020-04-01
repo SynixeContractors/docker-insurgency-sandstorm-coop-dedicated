@@ -11,7 +11,10 @@ RUN apt-get update \
     && useradd -ms /bin/bash steam
 ADD ./files/ini/ /tmp/ini
 ADD ./files/txt/ /tmp/txt
+ENV HOSTNAME Insurgency Sandstorm Dedicated Server
+ENV PASSWORD ""
 EXPOSE 27102/udp
 EXPOSE 27102
+EXPOSE 27131
 #VOLUME ["/var/insurgency/cfg"]
 CMD ["/supervisor.sh"]
