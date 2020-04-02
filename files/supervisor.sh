@@ -32,8 +32,14 @@ install() {
     echo "Installation done"
 }
 
+update() {
+    echo "Updating Insurgency Sandstorm Dedicated Server"
+    /opt/steam/steamcmd.sh +login anonymous +app_update 581330 +quit
+    echo "Update done"
+}
+
 trap term_handler SIGTERM
-[ ! -d "/opt/steam/insurgency/Insurgency/Binaries" ] && install
+[ ! -d "/opt/steam/insurgency/Insurgency/Binaries" ] && install || update
 #loadConfig
 echo "Starting Insurgency Sandstorm Dedicated Server"
 cd /opt/steam/insurgency/Insurgency/Binaries/Linux
