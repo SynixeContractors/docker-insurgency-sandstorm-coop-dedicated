@@ -16,5 +16,5 @@ ENV PASSWORD ""
 EXPOSE 27102/udp
 EXPOSE 27102
 EXPOSE 27131
-#VOLUME ["/var/insurgency/cfg"]
+VOLUME ["/var/insurgency/cfg"]
 CMD ["/supervisor.sh"]
