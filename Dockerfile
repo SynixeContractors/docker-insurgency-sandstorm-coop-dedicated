@@ -13,6 +13,7 @@ ADD ./files/ini/ /tmp/ini
 ADD ./files/txt/ /tmp/txt
 ENV HOSTNAME Insurgency Sandstorm Dedicated Server
 ENV PASSWORD ""
+ENV GSLT = ""
 EXPOSE 27102/udp
 EXPOSE 27102
 EXPOSE 27131
