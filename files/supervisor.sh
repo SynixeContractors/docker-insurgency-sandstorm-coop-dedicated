@@ -43,6 +43,6 @@ trap term_handler SIGTERM
 loadConfig
 echo "Starting Insurgency Sandstorm Dedicated Server"
 cd /opt/steam/insurgency/Insurgency/Binaries/Linux
-su steam -c "./InsurgencyServer-Linux-Shipping ?Password=$PASSWORD -Port=27102 -QueryPort=27131 -log -hostname=\"$HOSTNAME\" -NoEAC -MapCycle=MapCycle" & wait ${!}
+su steam -c "./InsurgencyServer-Linux-Shipping ?Password=$PASSWORD -Port=27102 -QueryPort=27131 -log -hostname=\"$HOSTNAME\" -GSLTToken=$GSLT -gamestats -MapCycle=MapCycle" & wait ${!}
 echo "Insurgency Sandstorm Dedicated Server died"
 shutdown
