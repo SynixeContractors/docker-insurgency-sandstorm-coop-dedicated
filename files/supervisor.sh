@@ -25,7 +25,9 @@ term_handler() {
 install() {
     echo "Installing Insurgency Sandstorm Dedicated Server"
     /opt/steam/steamcmd.sh +login anonymous +force_install_dir /opt/steam/insurgency +app_update 581330 validate +quit
+    mkdir -p /opt/steam/insurgency/Insurgency/Saved/Config/LinuxServer/
     mv /tmp/ini/* /opt/steam/insurgency/Insurgency/Saved/Config/LinuxServer/
+    mkdir -p /opt/steam/insurgency/Insurgency/Config/Server/
     mv /tmp/txt/* /opt/steam/insurgency/Insurgency/Config/Server/
     rm -r /tmp
     chown -R steam:steam /opt/steam/insurgency
