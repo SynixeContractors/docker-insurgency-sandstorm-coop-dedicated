@@ -9,8 +9,7 @@ RUN apt-get update \
     && chmod +x /supervisor.sh \
     && apt-get remove -y unzip wget \
     && useradd -ms /bin/bash steam
-ADD ./files/ini/ /tmp/ini
-ADD ./files/txt/ /tmp/txt
+ADD ./files/cfg/ /tmp
 ENV HOSTNAME Insurgency Sandstorm Dedicated Server
 ENV PASSWORD ""
 ENV GSLT = ""
