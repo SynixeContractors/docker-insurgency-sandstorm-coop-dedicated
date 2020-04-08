@@ -36,7 +36,7 @@ install() {
 
 update() {
     echo "Updating Insurgency Sandstorm Dedicated Server"
-    /opt/steam/steamcmd.sh +login anonymous +app_update 581330 +quit
+    /opt/steam/steamcmd.sh +login anonymous +app_update 581330 validate +quit
     echo "Update done"
 }
 
