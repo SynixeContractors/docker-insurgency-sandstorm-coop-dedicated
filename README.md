@@ -1,6 +1,10 @@
 # Insurgency Sandstorm dedicated server
 This image provides an Insurgency Sandstorm dedicated server for cooperative play.
 
+## DEPRECATED!
+This image is deprecated and will is not under development anymore.
+Feel free to fork and build your own.
+
 ## Server properties
 * Port: 27102
 * Query port: 27131
