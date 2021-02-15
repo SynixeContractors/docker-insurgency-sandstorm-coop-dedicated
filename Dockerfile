@@ -14,6 +14,7 @@ ADD ./files/cfg/ /tmp
 ENV HOSTNAME Insurgency Sandstorm Dedicated Server
 ENV PASSWORD ""
 ENV GSLT = ""
+ENV PARAMS ""
 EXPOSE 27102/udp
 EXPOSE 27102
 EXPOSE 27131
